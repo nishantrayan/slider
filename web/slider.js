@@ -1,1 +1,1 @@
-alert("HIIIIIIIiiiiiiiiiiiiii");
+$('.currentTime').text('Current time is')
