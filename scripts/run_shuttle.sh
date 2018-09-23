@@ -27,7 +27,7 @@
         cd /home/pi/src/slider && git stash pop
         cd /home/pi/src/slider && ./scripts/show_shuttle.sh
     else
-        echo "No updates in remote"
+        echo "No updates in remote!"
     fi
     sleep 2
 done
