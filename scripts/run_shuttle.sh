@@ -15,9 +15,7 @@
         echo "diverged"
     fi
  }
- pushd /home/pi/src/slider
- ./scripts/show_shuttle.sh
- popd
+ /home/pi/src/slider/scripts/show_shuttle.sh
  while true; do
     pushd /home/pi/src/slider
     git remote update
