@@ -1,5 +1,6 @@
  check_update()
  {
+    cd /home/pi/src/slider
     UPSTREAM=${1:-'@{u}'}
     LOCAL=$(git rev-parse @)
     REMOTE=$(git rev-parse "$UPSTREAM")
@@ -18,7 +19,7 @@
  /home/pi/src/slider/scripts/show_shuttle.sh
  while true; do
     cd /home/pi/src/slider && git remote update
-    update=$(cd /home/pi/src/slider && check_update)
+    update=$(check_update)
     if [ "$update" == "pull" ]; then
         echo "Updates in remote"
         cd /home/pi/src/slider && git stash
