@@ -20,7 +20,7 @@
  while true; do
     cd /home/pi/src/slider && git remote update
     update=$(check_update)
-    if [ "$update" == "pull" ]; then
+    if [ "$update" = "pull" ]; then;
         echo "Updates in remote"
         cd /home/pi/src/slider && git stash
         cd /home/pi/src/slider && git pull --rebase
