@@ -1,9 +1,15 @@
 function getNextShuttleTime(){
-    const shuttleTimeStrings = ['5:00']
+    const shuttleTimeStrings = ['5:45 pm']
     const shuttleTimes = $.map(shuttleTimeStrings, function(ts){
         var hm = ts.split(":");
         var hour = parseInt(hm[0]);
-        var minute = parseInt(hm[1]);
+        var slot = hm[1].split(" ")[1].toLowerCase();
+        var minute = parseInt(hm[1].split(" ")[0]);
+        if(slot == "pm" && hour < 12){
+            hour = hour + 12;
+        } else if(slot == 'am' && hour == 12){
+            hour = 0;
+        }
         var dt = new Date($.now());
         dt.setHours(hour);
         dt.setMinutes(minute);
