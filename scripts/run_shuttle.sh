@@ -17,18 +17,16 @@
  }
  /home/pi/src/slider/scripts/show_shuttle.sh
  while true; do
-    pushd /home/pi/src/slider
-    git remote update
-    update=$(check_update)
+    cd /home/pi/src/slider && git remote update
+    update=$(cd /home/pi/src/slider && check_update)
     if [ "$update" == "pull" ]; then
         echo "Updates in remote"
-        git stash
-        git pull --rebase
-        git stash pop
-        ./scripts/show_shuttle.sh
+        cd /home/pi/src/slider && git stash
+        cd /home/pi/src/slider && git pull --rebase
+        cd /home/pi/src/slider && git stash pop
+        cd /home/pi/src/slider && ./scripts/show_shuttle.sh
     else
         echo "No updates in remote"
     fi
     sleep 2
-    popd
 done
