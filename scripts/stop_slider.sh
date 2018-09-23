@@ -1,0 +1,1 @@
+pgrep -fl run_shuttle | cut -d" " -f1 | xargs kill -9
