@@ -2,6 +2,13 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="./slider.js"></script>
+<script type="text/javascript">
+    setInterval("my_function();",1000);
+    function my_function(){
+        window.location = location.href;
+    }
+  </script>
+
 <div class="currentInfo">
     <h2>
         Today is <h1><span class="currentDate"></span></h1>

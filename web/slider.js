@@ -13,6 +13,7 @@ function getNextShuttleTime(){
         var dt = new Date($.now());
         dt.setHours(hour);
         dt.setMinutes(minute);
+        dt.setSeconds(0);
         return dt;
     });
     var nextShuttleTimes = $.grep(shuttleTimes, function(dt){
@@ -26,7 +27,7 @@ function getNextShuttleTime(){
     }
 }
 function fmtTime(dt){
-    return dt.getHours() + ":" + dt.getMinutes();
+    return dt.getHours() + ":" + dt.getMinutes() +":" + dt.getSeconds();
 }
 function fmtDate(dt){
     const monthNames = ["January", "February", "March", "April", "May", "June",
