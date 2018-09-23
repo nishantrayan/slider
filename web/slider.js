@@ -32,7 +32,7 @@ function fmtDate(dt){
     const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
-    return monthNames[dt.getMonth()] + " " + dt.getDate() + ", " + dt.getYear();
+    return monthNames[dt.getMonth()] + " " + dt.getDate();
 }
 $(document).ready(function(){
 
