@@ -1,5 +1,5 @@
 function getNextShuttleTime(){
-    const shuttleTimeStrings = ['18:00']
+    const shuttleTimeStrings = ['5:00']
     const shuttleTimes = $.map(shuttleTimeStrings, function(ts){
         var hm = ts.split(":");
         var hour = parseInt(hm[0]);
@@ -33,5 +33,11 @@ $(document).ready(function(){
     var dt = new Date($.now());
     $('.currentDate').text(fmtDate(dt))
     $('.currentTime').text(fmtTime(dt));
-    $('.nextShuttleTime').text(fmtTime(getNextShuttleTime()));
+    var nextShuttleTime = getNextShuttleTime();
+    if(nextShuttleTime != null) {
+        $('.nextShuttleTime').text(fmtTime(getNextShuttleTime()));
+    } else {
+        $('.nextShuttleTime').text("NO MORE!");
+    }
+
 });
