@@ -1,6 +1,6 @@
  while true; do
-    ~/src/slider/scripts/show_shuttle.sh
-    pushd ~/src/slider
+    /home/pi/src/slider/scripts/show_shuttle.sh
+    pushd /home/pi/src/slider
 	git pull --rebase
 	popd
 done
