@@ -1,2 +1,2 @@
 # slider
-to make everything easy for you.
+To make everything easy for you.
